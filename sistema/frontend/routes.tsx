@@ -10,8 +10,8 @@
  */
 
 import SistemaDashboardPage from './pages/dashboard';
-import SistemaModelNotificationPage from './pages/modelNotification';
-import SistemaAjustesPage from './pages/ajustes';
+import SistemaModelNotificationPage from './pages/model-notification';
+import SistemaAjustesPage from './pages/settings';
 
 // Prefixo padrão para isolamento de rota
 const MODULE_ROOT = '/sistema';
@@ -20,10 +20,10 @@ export const ModuleRoutes = [
     // Rota: /modules/sistema/dashboard
     { path: `${MODULE_ROOT}/dashboard`, component: SistemaDashboardPage },
 
-    // Rota: /modules/sistema/notificacao -> modelNotification
-    { path: `${MODULE_ROOT}/modelNotification`, component: SistemaModelNotificationPage },
+    // Rota: /modules/sistema/notificacao -> model-notification
+    { path: `${MODULE_ROOT}/model-notification`, component: SistemaModelNotificationPage },
     { path: `${MODULE_ROOT}/model-notification`, component: SistemaModelNotificationPage },
 
     // Rota: /modules/sistema/ajustes
-    { path: `${MODULE_ROOT}/ajustes`, component: SistemaAjustesPage },
+    { path: `${MODULE_ROOT}/settings`, component: SistemaAjustesPage },
 ];
