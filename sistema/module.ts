@@ -8,7 +8,7 @@
 import { ModuleContract } from '@core/contracts/ModuleContract';
 import { CoreContext } from '@core/context/CoreContext';
 import { ModulePermissions } from './permissions';
-import { ModuleMenu } from './frontend/menu';
+// import { ModuleMenu } from './frontend/menu'; // Frontend import removed for Backend compatibility
 
 export const SistemaModule: ModuleContract = {
     // Identificadores
@@ -35,9 +35,9 @@ export const SistemaModule: ModuleContract = {
         }
 
         // 2. Registro do Menu (Lado do Servidor)
-        if (ModuleMenu) {
+        /* if (ModuleMenu) {
             console.log('   M Menu definido');
-        }
+        } */
 
         // 3. Adicionar notificação na topbar
         ctx.events.on('notifications:register', () => {

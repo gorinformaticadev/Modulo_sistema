@@ -10,7 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/components/ui/use-toast';
 import { Bell, Send, CheckCircle, AlertTriangle, AlertCircle, Info, Shield, Users, Lock, Globe, Building, CheckSquare, Square, Search } from 'lucide-react';
-import { notificationTestService, NotificationType, NotificationTarget, NotificationScope } from '../services/notificationTestService';
+import { notificationTestService, NotificationType, NotificationTarget, NotificationScope } from '../../services/notificationTestService';
 
 export default function Page() {
   const { toast } = useToast();

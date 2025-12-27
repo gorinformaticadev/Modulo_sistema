@@ -1,9 +1,9 @@
 
 import { Controller, Get, Post, Body, UseGuards, Put } from '@nestjs/common';
-import { Roles } from '../../../../apps/backend/src/core/roles.decorator';
-import { RolesGuard } from '../../../../apps/backend/src/core/roles.guard';
-import { JwtAuthGuard } from '../../../../apps/backend/src/core/jwt-auth.guard';
-import { PrismaService } from '../../../../apps/backend/src/core/prisma/prisma.service';
+import { Roles } from '@core/roles.decorator';
+import { RolesGuard } from '@core/roles.guard';
+import { JwtAuthGuard } from '@core/jwt-auth.guard';
+import { PrismaService } from '@core/prisma/prisma.service';
 import { SistemaCronService } from './cron.service';
 
 @Controller('modules/sistema/config')
@@ -17,7 +17,7 @@ export class SistemaConfigController {
 
     @Get('notifications')
     async getNotificationConfig() {
-        const config = await (this.prisma as any).sistemaNotificationSchedule.findFirst({
+        const config = await (this.prisma as any).modSistemaNotificationSchedule.findFirst({
             where: { enabled: true }
         });
         return config || {
@@ -32,11 +32,11 @@ export class SistemaConfigController {
     @Post('notifications')
     async saveNotificationConfig(@Body() body: any) {
         // Upsert logic (assuming single config for now)
-        const existing = await (this.prisma as any).sistemaNotificationSchedule.findFirst();
+        const existing = await (this.prisma as any).modSistemaNotificationSchedule.findFirst();
 
         let result;
         if (existing) {
-            result = await (this.prisma as any).sistemaNotificationSchedule.update({
+            result = await (this.prisma as any).modSistemaNotificationSchedule.update({
                 where: { id: existing.id },
                 data: {
                     title: body.title,
@@ -47,7 +47,7 @@ export class SistemaConfigController {
                 }
             });
         } else {
-            result = await (this.prisma as any).sistemaNotificationSchedule.create({
+            result = await (this.prisma as any).modSistemaNotificationSchedule.create({
                 data: {
                     title: body.title,
                     content: body.content,

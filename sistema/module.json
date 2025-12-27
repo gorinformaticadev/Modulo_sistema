@@ -10,19 +10,19 @@
   "menus": [
     {
       "label": "Visão Geral",
-      "route": "/modules/sistema/dashboard",
+      "route": "/modules/sistema/pages/dashboard",
       "icon": "Activity",
       "order": 1
     },
     {
       "label": "Notificações (Modelo)",
-      "route": "/modules/sistema/modelNotification",
+      "route": "/modules/sistema/pages/modelNotification",
       "icon": "Bell",
       "order": 2
     },
     {
       "label": "Configurações",
-      "route": "/modules/sistema/ajustes",
+      "route": "/modules/sistema/pages/ajustes",
       "icon": "Settings",
       "order": 3
     }
