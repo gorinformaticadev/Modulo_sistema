@@ -1,4 +1,4 @@
-# 📦 Módulo de Sistema (@modules/sistema)
+ # 📦 Módulo de Sistema (@modules/sistema)
 
 Este é o módulo principal ("Core") do Sistema Multitenant. Ele fornece funcionalidades essenciais de infraestrutura, monitoramento e configurações globais.
 
