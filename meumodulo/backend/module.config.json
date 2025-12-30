@@ -1,0 +1,69 @@
+{
+  "name": "meumodulo",
+  "slug": "meumodulo",
+  "displayName": "Meu Módulo",
+  "version": "1.0.0",
+  "description": "Módulo personalizado com funcionalidades integradas",
+  "author": "Equipe CORE",
+  "category": "custom",
+  "enabled": true,
+  "dependencies": [
+    {
+      "type": "core",
+      "name": "core",
+      "version": ">=1.0.0"
+    }
+  ],
+  "config": {
+    "defaultSettings": {
+      "showNotifications": true,
+      "enableWidgets": true,
+      "maxItems": 50,
+      "enablePublicPages": true
+    },
+    "permissions": [
+      "meumodulo.view",
+      "meumodulo.create",
+      "meumodulo.edit",
+      "meumodulo.delete",
+      "meumodulo.admin"
+    ],
+    "routes": [
+      {
+        "path": "/meumodulo",
+        "component": "MeuModuloDashboardPage",
+        "title": "Dashboard Meu Módulo",
+        "protected": true,
+        "permissions": ["meumodulo.view"]
+      },
+      {
+        "path": "/meumodulo/lista",
+        "component": "MeuModuloListaPage",
+        "title": "Lista",
+        "protected": true,
+        "permissions": ["meumodulo.view"]
+      },
+      {
+        "path": "/meumodulo/configuracoes",
+        "component": "MeuModuloConfiguracoesPage",
+        "title": "Configurações",
+        "protected": true,
+        "permissions": ["meumodulo.view"]
+      }
+    ],
+    "menuItems": [
+      {
+        "id": "meumodulo-main",
+        "label": "Meu Módulo",
+        "icon": "box",
+        "path": "/meumodulo",
+        "order": 10,
+        "permissions": ["meumodulo.view"]
+      }
+    ],
+    "database": {
+      "tables": ["meumodulo_configs"],
+      "migrations": true
+    }
+  }
+}
