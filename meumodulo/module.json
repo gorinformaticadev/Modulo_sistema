@@ -1,0 +1,35 @@
+{
+  "name": "meumodulo",
+  "displayName": "Meu Módulo",
+  "version": "1.0.0",
+  "description": "Módulo personalizado com funcionalidades integradas",
+  "author": "GOR Informatica",
+  "category": "custom",
+  "enabled": true,
+  "dependencies": null,
+  "menus": [
+    {
+      "label": "Dashboard",
+      "route": "/modules/meumodulo/pages/dashboard",
+      "icon": "BarChart3",
+      "order": 1
+    },
+    {
+      "label": "Lista",
+      "route": "/modules/meumodulo/pages/lista",
+      "icon": "List",
+      "order": 2
+    },
+    {
+      "label": "Configurações",
+      "route": "/modules/meumodulo/pages/configuracoes",
+      "icon": "Settings",
+      "order": 3
+    }
+  ],
+  "defaultConfig": {
+    "showNotifications": true,
+    "enableWidgets": true,
+    "maxItems": 50
+  }
+}
