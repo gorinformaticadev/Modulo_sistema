@@ -27,21 +27,21 @@ export const ModuleMenu = [
             {
                 id: 'sistema-dashboard',
                 name: 'Dashboard',
-                href: '/modules/sistema/dashboard',
+                href: '/modules/sistema/pages/dashboard',
                 icon: 'BarChart3',
                 order: 1
             },
             {
                 id: 'sistema-notificacao',
                 name: 'Notificações',
-                href: '/modules/sistema/notificacao',
+                href: '/modules/sistema/pages/notificacao',
                 icon: 'Bell',
                 order: 2
             },
             {
                 id: 'sistema-ajustes',
                 name: 'Ajustes',
-                href: '/modules/sistema/ajustes',
+                href: '/modules/sistema/pages/ajustes',
                 icon: 'Settings',
                 order: 3
             }
