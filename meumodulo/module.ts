@@ -1,6 +1,6 @@
 import { ModuleContract } from '@core/contracts/ModuleContract';
 import { CoreContext } from '@core/context/CoreContext';
-import { ModulePermissions } from './backend/permissions';
+import { ModulePermissions } from './permissions';
 
 export const MeuModuloModule: ModuleContract = {
     name: 'Meu Módulo',
